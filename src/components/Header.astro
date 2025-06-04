@@ -1,74 +1,79 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import {SITE_TITLE} from '../consts';
+import NavLink from './NavLink.astro';
 ---
 
 <header>
-  <nav>
-    <div class="logo">
-      <img src="/small-logo.png">
-      <h2><a href="/">{SITE_TITLE}</a></h2>
+  <div class="header__inner">
+    <div class="logo__container">
+      <a class="logo__link" href="/">
+        <div class="logo__img__container">
+          <img class="logo__img" src="/small-logo.png">
+        </div>
+        <h2 class="logo__title">Generations Grill Works</h2>
+      </a>
     </div>
-
-    <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-    </div>
-  </nav>
+    <nav>
+      <a href="/builds">Builds</a>
+    </nav>
+  </div>
 </header>
+
 <style>
     header {
-        margin: 0;
-        padding: 0 1em;
-        background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        //margin-bottom: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid #dcdada;
     }
 
-    h2 {
-        margin: 0;
-        font-size: 1em;
+    //@media(max-width: 700px) {
+    //  header {
+    //    padding: 4px;
+    //  }
+    //}
+
+    header a {
+      text-decoration: unset;
+      color: unset;
     }
 
-    h2 a,
-    h2 a.active {
-        text-decoration: none;
-    }
-
-    nav {
+    .header__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .logo__container {
+        margin-right: auto;
+    }
+
+    .logo__link {
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .logo__img__container {
+        width: 35px;
+    }
+
+    .logo__img {
+        width: 100%;
+        border-radius: 5px;
     }
 
     nav a {
-        padding: 1em 0.5em;
-        color: var(--black);
-        border-bottom: 4px solid transparent;
         text-decoration: none;
+        color: unset;
     }
 
-    nav a.active {
-        text-decoration: none;
-        border-bottom-color: var(--accent);
+    nav a:hover {
+        text-decoration: underline;
+        color: #CE4B49;
     }
 
-    .social-links,
-    .social-links a {
-        display: flex;
+    .logo__title {
+        font-size: min(5.9vw, 1.8rem);
     }
 
-    @media (max-width: 720px) {
-        .social-links {
-            display: none;
-        }
-    }
 
-    img {
-        width: 30px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-    }
 </style>

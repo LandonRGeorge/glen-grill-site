@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Products">
+  <main class="content__wrapper">
+    <div class="content">
+      <div class="product">
+        <div class="product__img">
+          <img src="/grill1/2023-11-11/finished-open-angle-left.jpg"/>
+          <span class="product__status">sold</span>
+        </div>
+        <div class="product__description">
+          <h2>Barrel Smoker </h2>
+          <p>Transform tough cuts into tender perfection with this handcrafted barrel smoker. Built from heavy-gauge steel with precision welding, this offset smoker delivers consistent, even heat distribution for authentic pit-style barbecue that rivals the best BBQ joints.</p>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product__description">
+          <h2>Santa Maria #1</h2>
+          <p>This grill embodies the authentic Santa Maria grilling experience with time-tested design and modern precision. This workhorse grill features a deep, rectangular firebox that creates the ideal coal bed for traditional red oak cooking, while the smooth hand-crank adjustment system gives you effortless control over your cooking temperature.</p>
+        </div>
+        <div class="product__img">
+          <img src="/grill2/2024-11-10/finished.jpeg"/>
+          <span class="product__status">sold</span>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product__img">
+          <img src="/grill3/2025-05-03/front-right-angle.jpg"/>
+          <span class="product__status">sold</span>
+        </div>
+        <div class="product__description">
+          <h2>Santa Maria #2</h2>
+          <p>This build takes the Santa Maria grilling to the next level with enhanced features designed for serious outdoor chefs. This premium model combines traditional open-fire cooking with professional-grade adjustability and expanded cooking capabilities, making it the ultimate choice for backyard pitmasters and commercial applications.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+    .product {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .product:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    .product__img {
+        border-radius: 5px;
+        max-width: 300px;
+        min-width: 200px;
+      position: relative;
+    }
+
+    .product__img img {
+      display: block;
+      width: 100%;
+      //max-height: 200px;
+    }
+
+    .product__status {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background-color: #CE4B49;
+      color: white;
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin: 4px;
+      text-transform: uppercase;
+      font-size: .8rem;
+    }
+
+    @media(max-width: 500px) {
+      .product {
+        display: grid;
+      }
+      .product__description {
+        grid-row: 1;
+      }
+      .product__img {
+        grid-row: 2;
+        max-width: unset;
+        height: unset;
+        width: 100%;
+      }
+      .product__img img {
+        max-height: none;
+      }
+    }
+
+
+</style>
+
+

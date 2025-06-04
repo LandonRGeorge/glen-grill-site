@@ -1,15 +1,29 @@
----
-const today = new Date();
----
 
 <footer>
-	Generations Grill Works, LLC
+	<div class="veteran">
+		<img src="/Flag_of_the_United_States.svg">
+		<p>U.S. Vereran Owned and Operated</p>
+	</div>
+	<p>Generations Grill Works, LLC</p>
 </footer>
+
 <style>
 	footer {
-		padding: 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		padding: 1rem;
 		text-align: center;
+		border-top: 1px solid #dcdada;
 	}
+	.veteran {
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		align-items: center;
+	}
+	.veteran img {
+		width: 40px;
+	}
+	p {
+		margin-block: .5rem;
+	}
+
 </style>
