@@ -5,19 +5,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Home">
   <main class="content__wrapper">
     <div class="content">
+
       <section>
         <div class="hero">
           <img src="/grill3/2025-05-03/front-right-angle.jpg"/>
-          <p class="hero__description">We
-            combine premium materials, expert craftsmanship, and innovative design to create grilling experiences that go
-            beyond ordinary.</p>
+
+          <!--  <p class="hero__description">We-->
+          <!--    combine premium materials, expert craftsmanship, and innovative design to create grilling experiences that go-->
+          <!--    beyond ordinary.</p>-->
         </div>
       </section>
-      <section>
-        <p>Transform your outdoor cooking with handcrafted grills built to your exact specifications. From intimate backyard gatherings to grand entertaining spaces, every grill is uniquely
-          yours.
-        </p>
+      <section class="section section__main">
+        <div>
+          <p>At <span class="company">Generations Grill Works</span>, we
+            combine premium materials, expert craftsmanship, and innovative design to create grilling experiences that
+            go
+            beyond ordinary. Transform your outdoor cooking with handcrafted grills built to your exact specifications.
+            From intimate backyard gatherings to grand entertaining spaces, every grill is uniquely
+            yours.</p>
+          <a class="cta" href="tel:+18174565333">Contact Us</a>
+
+        </div>
       </section>
+
 
       <!--<div class="img-gallery">-->
       <!--  <img src="/grill3/2025-05-03/front-right-angle.jpg"/>-->
@@ -31,33 +41,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <section class="section">
         <h2 class="section__header">The Art of Custom Grilling</h2>
         <div class="section__content">
-          <p>Every grill we create begins with a conversation about your vision. Whether you're dreaming of a sleek modern
+          <p>Every grill we create begins with a conversation about your vision. Whether you're dreaming of a sleek
+            modern
             centerpiece for your contemporary patio or a robust, traditional setup for serious barbecue enthusiasts, our
             master craftsmen translate your ideas into reality using only the finest materials.</p>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__header">Premium Materials, Lasting Performance</h2>
-        <div class="section__content">
-        <p>We source heavy-gauge stainless steel, cast iron grates, and precision-engineered components that stand up to
-          years of intense heat and regular use. Our grills aren't just built to look impressive – they're engineered to
-          deliver consistent, restaurant-quality results every time you fire them up.</p>
+        <h2>Premium Materials, Lasting Performance</h2>
+        <div>
+          <p>We source precision-engineered components that stand up to
+            years of intense heat and regular use. Our grills aren't just built to look impressive – they're engineered
+            to
+            deliver consistent, restaurant-quality results every time you fire them up. Our grills are built with a
+            solid 1/8 thick frame for cooking and stability. </p>
         </div>
       </section>
-      <section>
+      <section class="section">
         <h2>Tailored to Your Space and Style</h2>
         <p>No two outdoor kitchens are alike, and neither should be their grills. We design each piece to complement
           your existing architecture, fit your available space perfectly, and match your entertaining style. From
           compact urban balcony solutions to sprawling outdoor kitchen installations, we make it work.</p>
       </section>
-      <section>
+      <section class="section">
         <h2>Beyond the Ordinary Grilling Experience</h2>
         <p>Our custom approach means incorporating features that matter to you: specialized cooking zones for different
           techniques, built-in temperature monitoring, custom storage solutions, or integrated prep areas. We're not
           just
           building a grill – we're creating the foundation for countless memorable meals.</p>
       </section>
-      <section>
+      <section class="section">
         <h2>Your Vision, Our Expertise</h2>
         <p>
           With decades of metalworking experience and a passion for outdoor cooking, our team brings both technical
@@ -66,7 +79,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           functionality features to ensure your finished grill exceeds your expectations.
         </p>
       </section>
-      <section>
+      <section class="section">
         <h2>The Process</h2>
         <p>From initial consultation through final installation, we maintain open communication and meticulous
           attention to
@@ -74,41 +87,79 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           years of reliable performance and cooking satisfaction.
         </p>
       </section>
+      <section class="section">
+        <h2>Warranty</h2>
+        <p>All structural welds and fabrication are guaranteed against defects. Mechanical components (wheels, handles,
+          dampers, etc.) are not covered under warranty due to normal wear and usage. Questions or issues? We're just a
+          phone call
+          or text away. Call Glen at <a class="phone" href="tel:+18174565333">817-456-5333</a> or Todd at <a
+              class="phone" href="tel:+16822293343">682-229-3343</a>.
+
+        </p>
+      </section>
     </div>
   </main>
 </BaseLayout>
 
 <style>
-    p {
-        line-height: 1.5;
-    }
 
-    p span {
-        font-style: italic;
-    }
     .hero img {
-      width: 100%;
-      display: block;
-      border-radius: 4px;
+        width: 100%;
+        display: block;
+        border-radius: 4px;
     }
+
     .hero {
-      position: relative;
+        position: relative;
 
     }
+
     .hero__description {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      color: white;
-      font-size: min(5.9vw, 1.8rem);
-      padding-inline: 16px;
-      text-shadow: 1px 1px 2px black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        font-size: min(5.9vw, 1.8rem);
+        padding-inline: 16px;
+        text-shadow: 1px 1px 2px black;
     }
-    .section__content img {
-      width: 100px;
-      float: right;
+
+    .section {
+        margin-block: 16px;
     }
+
+    .company {
+        font-weight: bold;
+    }
+
+    .cta {
+        display: block;
+        border: none;
+        background-color: #CE4B49;
+        padding: 8px 16px;
+        font-size: 1.2rem;
+        margin-inline: auto;
+        border-radius: 4px;
+        color: white;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-decoration: none;
+        width: fit-content;
+    }
+
+    .cta:hover {
+        background-color: #c43e3c;
+    }
+
+    .phone {
+        text-decoration: none;
+        color: unset;
+    }
+
+    .phone:hover {
+        text-decoration: underline;
+    }
+
 </style>
 
 

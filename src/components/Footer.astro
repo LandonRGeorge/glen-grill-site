@@ -1,29 +1,63 @@
-
 <footer>
-	<div class="veteran">
-		<img src="/Flag_of_the_United_States.svg">
-		<p>U.S. Vereran Owned and Operated</p>
-	</div>
-	<p>Generations Grill Works, LLC</p>
+  <div class="veteran">
+    <img src="/Flag_of_the_United_States.svg">
+    <p>U.S. Vereran Owned and Operated</p>
+  </div>
+  <div class="phone">
+    <a href="tel:+18174565333">
+      <img src="/phone.svg">
+      <span>Glen: 817-456-5333</span>
+    </a>
+  </div>
+  <div class="phone">
+    <a href="tel:+16822293343">
+      <img src="/phone.svg">
+      <span>Todd: 682-229-3343</span>
+    </a>
+  </div>
+  <div class="company">
+    <p>Generations Grill Works, LLC</p>
+  </div>
 </footer>
 
 <style>
-	footer {
-		padding: 1rem;
-		text-align: center;
-		border-top: 1px solid #dcdada;
-	}
-	.veteran {
-		display: flex;
-		justify-content: center;
-		gap: 8px;
-		align-items: center;
-	}
-	.veteran img {
-		width: 40px;
-	}
-	p {
-		margin-block: .5rem;
-	}
+    footer {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #dcdada;
+    }
+
+    .veteran {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .veteran img {
+        width: 40px;
+    }
+
+    footer > * {
+        margin-block: .5rem;
+    }
+
+    .phone img {
+        width: 25px;
+    }
+
+    .phone a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: initial;
+    }
+
+    p {
+        line-height: 1;
+        margin: 0;
+    }
 
 </style>
